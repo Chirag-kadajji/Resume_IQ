@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ResumeIQ</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+        <h1> ResumeIQ</h1>
+        <p>AI Resume Analyzer</p>
+
+        <form method="POST" enctype="multipart/form-data">
+            <label class="upload">
+                <input type="file" name="resume" required>
+                Upload Resume
+            </label>
+
+            <button type="submit">Analyze</button>
+        </form>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    {% if prediction %}
+    <div class="right-panel">
+
+        <div class="card highlight">
+            <h2>{{ prediction }}</h2>
+            <p>Predicted Role</p>
+        </div>
+
+        <div class="card">
+            <h3>Match Score</h3>
+            <div class="bar">
+                <div class="fill" style="width: {{ score|default(0) }}%"></div>
+            </div>
+            <p>{{ score }}%</p>
+        </div>
+
+        <div class="card">
+            <h3>ATS Score</h3>
+            <div class="bar">
+                <div class="fill ats" style="width: {{ ats_score|default(0) }}%"></div>
+            </div>
+            <p>{{ ats_score }}%</p>
+        </div>
+
+        <div class="card">
+            <h3> Skills</h3>
+            <div class="skills-container">
+                {% for skill in skills %}
+                    <span class="skill-tag">{{ skill.capitalize() }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Missing Skills</h3>
+            <ul>
+                {% for skill in missing_skills %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Recommended Roles</h3>
+            <ul>
+                {% for job in job_roles %}
+                    <li>{{ job }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3> What You Should Do Next</h3>
+            <ul>
+                {% for step in action_plan %}
+                    <li>{{ step }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3> Resume Improvement</h3>
+            <ul>
+                {% for tip in feedback %}
+                    <li>{{ tip }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+    {% endif %}
+
+</div>
+
+<!-- 🔥 FLOATING PROFILE BUTTON -->
+<a href="https://github.com/Chirag-kadajji" target="_blank" class="floating-profile">
+    C
+</a>
+
+</body>
+</html>

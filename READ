@@ -1,0 +1,15 @@
+pip install flask scikit-learn pandas numpy nltk PyPDF2    --first install this in terminal
+pip install pdfplumber --run this in terminal 
+pip install python-docx --run this
+run train.py first!!  (python model_train.py)
+
+run python app.py
+
+
+
+
+https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset? --dataset taken frm here inspired / combined with Kaggle + custom data
+
+I developed an AI-powered Resume Analyzer that predicts job roles based on resume content, calculates ATS score, identifies skill gaps, and provides personalized career guidance including action plans and resume feedback. It helps job seekers optimize their resumes and improve employability
+
+The system takes a resume as input, extracts text, processes it using TF-IDF, predicts job role using Logistic Regression, calculates match score based on model confidence, evaluates ATS score using role-based skill comparison, identifies missing skills, and provides job recommendations and suggestions

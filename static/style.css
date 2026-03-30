@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: white;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT PANEL */
+.left-panel {
+    width: 30%;
+    padding: 40px;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(10px);
+}
+
+.left-panel h1 {
+    font-size: 28px;
+}
+
+.left-panel p {
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+/* UPLOAD */
+.upload {
+    display: block;
+    padding: 15px;
+    border: 2px dashed rgba(255,255,255,0.4);
+    text-align: center;
+    margin: 20px 0;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.upload:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.upload input {
+    display: none;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #ff7eb3, #ff4f81);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* RIGHT PANEL */
+.right-panel {
+    width: 70%;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    overflow-y: auto;
+}
+
+/* CARDS */
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.highlight {
+    grid-column: span 2;
+    text-align: center;
+}
+
+/* PROGRESS */
+.bar {
+    background: rgba(255,255,255,0.2);
+    height: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.fill {
+    height: 10px;
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+.fill.ats {
+    background: linear-gradient(90deg, #ff7eb3, #ff4f81);
+}
+
+/* SKILLS */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+    color: black;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.skill-tag:hover {
+    transform: scale(1.1);
+}
+
+/* LISTS */
+ul {
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* 🔥 FLOATING PROFILE BUTTON */
+.floating-profile {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.floating-profile:hover {
+    transform: scale(1.1);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 10px;
+}
