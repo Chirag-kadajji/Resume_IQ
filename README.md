@@ -32,7 +32,7 @@ Source: Kaggle
 Link: https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset
 The dataset contains categorized resumes and is combined with custom data for better performance.
 ⚙️ Installation
-
+NOTE: zip file has been given!!
 Install the required dependencies:
 
 pip install flask scikit-learn pandas numpy nltk PyPDF2
